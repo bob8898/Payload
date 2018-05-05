@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DPRS - 2016-2017</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<style>
+</style>
+</head>
+
+<body>
+    <h1>DPRS Payload - 2016-2017</h1>
+    <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="payloads.html">All Payloads</a></li>
+  <li><a href="ppap.html">PPAP</a></li>
+  <li><a class="active" href="dprs.html">DPRS</a></li>
+  <li><a href="thurs.html">THURS</a></li>
+</ul>  
+    <div style="margin-left:15%;padding:1px 16px;height:1000px;">
+<p id="info"><span title="Descent Power Recovery System"><strong>DPRS</strong></span> is our second payload. This payload was created to harvest as much power as it could during the decent. A propeller and multiple solar panels were used. This time we got data, but the glue on the solar panels melted inside of the rocket. The solar panels were dangling from the wires when we retrieved our payload. We used the URS system from last year to help us retrieve the payload.</p>
+<br>
+<p id="desc"> Lots of energy is wasted on the descent of the payloads. Our payload will use multiple energy harvesting technologies (solar panels, propellers, piezo) to collect as much energy as possible during its descent. The payload will use a microprocessor to log the amount of power each method produces. The team will review the logged data to determine which method(s) were the most effective, as well as understanding the total power harvested.  Additionally, we will be reusing the URS (Ultimate Recovery System) from our successful THURS payload from last year (2016). URS is a redundant recovery system that included light, sound, a parachute, and GPS telemetry to aid in the recovery of the payload.
+</p>
+<br>
+<br>
+<div>
+    <h4>Team Members</h4><br>
+    <br>
+    <table>
+        <tr>
+            <th>Team Member</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Matthew Berg</td>
+            <td>7</td>
+        </tr>
+            <tr>
+            <td>Edward Gibson</td>
+            <td>7</td>
+        </tr>
+            <tr>
+            <td>Bergen Cloninger</td>
+            <td>7</td>
+        </tr>
+            <tr>
+            <td>Noah Douglass</td>
+            <td>7</td>
+
+        
+    </table>
+    
+</div>
+<br>
+<br>
+<h3>Launch Specs</h3>
+<table>
+    <tr>
+        <th>Rocket</th>
+        <th>Location</th>
+        <th>Apogee</th>
+    </tr>
+    <tr>
+        <td>Future Heavy v1.1</td>
+        <td>Space Port America - New Mexico</td>
+        <td>10,000 Feet <strong>(3.048 Km)</strong></td>
+    </tr>
+    
+</table>
+<br>
+
+<a href="dprsp.html" class="button">Payload Proposal</a>
+<br>
+<br>
+<p>Our payload body is completley 3D printed</p><br>
+<h2>Photos</h2>
+<br>
+<img src="IMG_2818.JPG" title="Taken by Matthew Berg" width="1000" alt="Picture of payload"><br>
+<img src="IMG_2822.JPG" title="Taken by Matthew Berg" width="1000" alt="Pictue of payload" >
+<img src="IMG_2824.JPG" title="Taken by Matthew Berg" width="1000" alt="Picture of payload"><br>
+<img src="IMG_2825.JPG" title="Taken by Matthew Berg" width="1000" alt="Pictue of payload">
+<br>
+<p>A quick video of the payload expanding.</p>
+<div id="vidplayer">
+<video width="1000" id="video">
+  <source src="IMG_2815.mp4" type="video/mp4" alt="Video of payload" title="Taken by Matthew Berg">
+
+  Your browser does not support HTML5 video.
+</video>
+<br>
+<button class="button2" onclick="pp()" id="pp" title="Play/Pause">Play</button> 
+<button class="button2" onclick="mm()" id="mm" title="Mute">Mute</button><br>
+<p>Volume</p>
+  <input type="range" min="0" max="100" value="100" class="slider" id="vol" title="volume">
+</div>
+</div>
+
+<script>
+var vol = document.getElementById("vol");
+var vid = document.getElementById("video");
+var pstate = 0;
+var mstate = 0;
+    function mm() {
+    mstate = !mstate;
+    vid.muted = mstate;
+    if(mstate == 1){
+        document.getElementById("mm").innerText= "Unmute";
+
+     
+    }
+    if(mstate == 0){
+        document.getElementById("mm").innerText = "Mute";
+      
+    }
+} 
+    function pp() {
+    pstate = !pstate;
+    if(pstate == 1){
+        document.getElementById("pp").innerText= "Pause";
+
+        vid.play();
+    }
+    if(pstate == 0){
+        document.getElementById("pp").innerText = "Play";
+        vid.pause();
+    }
+} 
+    vol.oninput = function() {
+     var x = this.value / 100;
+     vid.volume = x;
+}
+
+</script>
+</body>
+
+
+
+</html>

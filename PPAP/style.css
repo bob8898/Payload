@@ -1,0 +1,102 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    
+}
+
+body {
+    background-color: black;
+    color: #00d300;
+    font-family: "Lucida Console";
+    
+}
+
+/* Change the link color on hover */
+li {
+    color: black;
+    background-color: #00d300;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    -o-transition-duration: 0.5s;
+    -moz-transistion-duration: 0.5s;
+    transition-duration: 0.5s;
+    
+}
+li a:hover {
+    background-color: black;
+    color: #00d300;
+}
+.active {
+    background-color: #065ae0;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: black;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+
+    
+}
+
+.button {
+     text-decoration: none;
+    background-color: #00d300; /* Green */
+    border-radius: 12px;
+    color: black;
+    border: 2px solid #00d300; /* Green */
+    padding: 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    -o-transition-duration: 0.5s;
+    -moz-transistion-duration: 0.5s;
+    transition-duration: 0.5s;
+   
+}
+
+.button:hover {
+    background-color: black; /* Green */
+    color: #00d300;
+}
+
+
+body {
+    -webkit-transition-duration: 0.5s; /* Safari */
+    -o-transition-duration: 0.5s;
+    -moz-transistion-duration: 0.5s;
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: center;
+}
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #00d300;
+    text-align: center;
+}
+
+td:hover {
+    background-color: #1e1e1e;
+    
+}

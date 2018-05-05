@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team PPAP -- Welcome</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+    <h1 style="text-align: center">Team PPAP</h1>
+    
+     <ul>
+  <li><a class="active" href="notindex.html">Home</a></li>
+  <li><a href="payloads.html">All Payloads</a></li>
+  <li><a href="ppap.html">PPAP</a></li>
+  <li><a href="dprs.html">DPRS</a></li>
+  <li><a href="thurs.html">THURS</a></li>
+</ul>  
+
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
+    <button id='mute' onclick="toggleM()" class="button2" style="margin-left:75%;padding:1px 16px;">UNMUTE!</button>
+<h2 id="info"><span title="Payload Positioning AutoPilot"><strong>PPAP</strong></span> is an autopilot payload designed to pilot itself to certain GPS coordinates after being ejected from a rocket. The apogee for the rocket is around 2 miles AGL.</h2>
+
+<h3>More information is in the PPAP tab.</h3>
+
+
+</div>
+<audio autoplay loop id="audio">
+  <source src="ppap.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+    var aud = document.getElementById("audio");
+    var state = 1;
+     aud.muted = state;
+    function toggleM() {
+    state = !state;
+    if(state == 1){
+        document.getElementById('mute').innerText = "UNMUTE!"
+    }
+      if(state == 0){
+        document.getElementById('mute').innerText = "MUTE!"
+    }
+    aud.muted = state;
+} 
+    
+    
+</script>
+</body>
+</html>
