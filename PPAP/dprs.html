@@ -103,9 +103,7 @@ var mstate = 0;
     function mm() {
     mstate = !mstate;
     vid.muted = mstate;
-    if(vid.ended){
-     pstate = 0;   
-    }
+
         if(mstate == 1){
         document.getElementById("mm").innerText= "Unmute";
 
@@ -132,7 +130,12 @@ var mstate = 0;
      var x = this.value / 100;
      vid.volume = x;
 }
-
+vid.ended = function(){
+     pstate = 0;   
+     document.getElementById("pp").innerText = "Play";
+     vid.pause();
+    }
+    
 </script>
 </body>
 
