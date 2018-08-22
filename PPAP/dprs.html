@@ -103,7 +103,10 @@ var mstate = 0;
     function mm() {
     mstate = !mstate;
     vid.muted = mstate;
-    if(mstate == 1){
+    if(vid.ended){
+     pstate = 0;   
+    }
+        if(mstate == 1){
         document.getElementById("mm").innerText= "Unmute";
 
      
